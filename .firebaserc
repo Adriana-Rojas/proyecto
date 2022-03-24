@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "proyecto-a08fd"
+  },
+  "targets": {
+    "proyecto-a08fd": {
+      "hosting": {
+        "proyecto": [
+          "proyecto-a08fd"
+        ]
+      }
+    }
+  }
+}
