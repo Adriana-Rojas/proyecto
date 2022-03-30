@@ -15,7 +15,11 @@ export class RecicladorService {
 
   }
   getRecicladores():Observable<any>{
-    return this.firestore.collection('recicladores', ref => ref.orderBy('fechaActualizacion','desc')).snapshotChanges();
+    return this.firestore.collection('recicladores', ref => ref.orderBy('fechaActualizacion','asc')).snapshotChanges();
+  }
+
+  eliminarReciclador(id :string): Promise<any>{
+    return this.firestore.collection('recicladores').doc(id).delete();
   }
   
 }
