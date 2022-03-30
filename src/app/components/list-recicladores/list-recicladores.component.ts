@@ -8,10 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-recicladores.component.css']
 })
 export class ListRecicladoresComponent implements OnInit {
-  items: Observable<any[]>;
-  constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('items').valueChanges();
-
+  constructor() {
   }
 
   ngOnInit(): void {
