@@ -12,6 +12,7 @@ import { RecicladorService } from 'src/app/services/reciclador.service';
 export class CreateRecicladorComponent implements OnInit {
   createReciclador: FormGroup;
   submitted =false;
+  loading =false;
 
   constructor( private fb :FormBuilder,
               private _recicladorService: RecicladorService,
@@ -44,11 +45,16 @@ export class CreateRecicladorComponent implements OnInit {
       fechaActualizacion:new Date()
     }
     
+    this.loading=true;
+
     this._recicladorService.agregarReciclador(reciclador).then(()=>{
-      this.toastr.success('Hello world!', 'Toastr fun!');
+      this.toastr.success('Reciclador Registrado', 'Creado!',{positionClass: 'toast-bottom-right'});
+      this.loading=false;
       this.router.navigate(['/list-recicladores'])
     }).catch(error =>{
       console.log(error);
+      this.loading=false;
+      this.toastr.error('Reciclador Error Registro', 'Error!',{positionClass: 'toast-bottom-right'});
     });
     
 

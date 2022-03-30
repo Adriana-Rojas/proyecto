@@ -15,36 +15,17 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th>Adriana</th>
-                  <td>Rojas</td>
-                  <td>1070</td>
-                  <td>12/09/1998</td>
+                <tr *ngFor="let reciclador of recicladores">
+                  <th>{{reciclador.nombre}}</th>
+                  <td>{{reciclador.apellido}}</td>
+                  <td>{{reciclador.documento}}</td>
+                  <td>{{reciclador.fecha}}</td>
                   <td>
                       <i class="fas fa-edit fa-lg text-info" style="margin-right: 30px;"></i>
                       <i class="fas fa-trash-alt fa-lg text-danger"></i>
                   </td>
                 </tr>
-                <tr>
-                  <th>Santiagi</th>
-                  <td>Rojas</td>
-                  <td>1070</td>
-                  <td>12/09/1998</td>
-                  <td>
-                      <i class="fas fa-edit fa-lg text-info" style="margin-right: 30px;"></i>
-                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
-                  </td>
-                </tr>
-                <tr>
-                  <th>Pepiti</th>
-                  <td>Rojas</td>
-                  <td>1070</td>
-                  <td>12/09/1998</td>
-                  <td>
-                      <i class="fas fa-edit fa-lg text-info" style="margin-right: 30px;"></i>
-                      <i class="fas fa-trash-alt fa-lg text-danger"></i>
-                  </td>
-                </tr>
+                
               </tbody>
           </table>
       </div>

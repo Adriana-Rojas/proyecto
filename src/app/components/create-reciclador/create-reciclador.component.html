@@ -5,6 +5,9 @@
                 <div class="card-body">
                     <h3>
                         Agregar Reciclador
+                        <div *ngIf="loading"class="spinner-border text-primary"  style="float: right;" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
                     </h3>
                     <span *ngIf="submitted && createReciclador.invalid" class="badge rounded-pill bg-danger">Todos los Campos Son Obligatorios</span>
                     <form class="mt-4" [formGroup]="createReciclador" (ngSubmit)="agregarReciclador()">
