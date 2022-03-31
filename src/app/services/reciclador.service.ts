@@ -21,5 +21,13 @@ export class RecicladorService {
   eliminarReciclador(id :string): Promise<any>{
     return this.firestore.collection('recicladores').doc(id).delete();
   }
+
+  getReciclador(id :string): Observable<any>{
+    return this.firestore.collection('recicladores').doc(id).snapshotChanges();
+  }
+
+  actualizarReciclador(id:string,data:any): Promise<any>{
+    return this.firestore.collection('recicladores').doc(id).update(data);
+  }
   
 }

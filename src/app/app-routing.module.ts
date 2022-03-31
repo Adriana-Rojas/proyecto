@@ -7,6 +7,7 @@ const routes: Routes = [
   {path: '', redirectTo:'list-recicladores', pathMatch:'full'},
   {path: 'list-recicladores', component:ListRecicladoresComponent},
   {path: 'create-Reciclador', component:CreateRecicladorComponent},  
+  {path: 'editReciclador/:id', component:CreateRecicladorComponent}, 
   {path: '**', redirectTo:'list-recicladores', pathMatch:'full'}
 ];
 
