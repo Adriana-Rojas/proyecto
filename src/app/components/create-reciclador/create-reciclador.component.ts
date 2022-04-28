@@ -15,6 +15,7 @@ export class CreateRecicladorComponent implements OnInit {
   loading =false;
   id: string|null;
   titulo='Agregar Reciclador';
+  titulobtn='Agregar';
 
   constructor( private fb :FormBuilder,
               private _recicladorService: RecicladorService,
@@ -95,6 +96,7 @@ export class CreateRecicladorComponent implements OnInit {
 
   esEditar(){
     this.titulo='Editar Reciclador';
+    this.titulobtn='Actualizar';
     if(this.id != null){
       this.loading=true;
       this._recicladorService.getReciclador(this.id).subscribe(data =>{
