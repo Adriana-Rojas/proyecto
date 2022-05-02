@@ -22,13 +22,25 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.component';
+import { ListOrganizacionesComponent } from './components/list-organizaciones/list-organizaciones.component';
+import { ListFundacionComponent } from './components/list-fundacion/list-fundacion.component';
+import { CreateFundacionComponent } from './components/create-fundacion/create-fundacion.component';
+import { CreateOrganizacionComponent } from './components/create-organizacion/create-organizacion.component';
+import { CreateUsuarioComponent } from './components/create-usuario/create-usuario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListRecicladoresComponent,
     CreateRecicladorComponent,
-    NavbarComponent
+    NavbarComponent,
+    ListUsuariosComponent,
+    ListOrganizacionesComponent,
+    ListFundacionComponent,
+    CreateFundacionComponent,
+    CreateOrganizacionComponent,
+    CreateUsuarioComponent
   ],
   imports: [
     BrowserModule,
