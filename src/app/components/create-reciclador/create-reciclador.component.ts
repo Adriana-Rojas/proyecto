@@ -26,7 +26,10 @@ export class CreateRecicladorComponent implements OnInit {
         nombre: ['',Validators.required],
         apellido: ['',Validators.required],
         documento: ['',Validators.required],
-        fecha: ['',Validators.required]
+        fecha: ['',Validators.required],
+        telefono: ['',Validators.required],
+        correo: ['',Validators.required],
+        contrasena: ['',Validators.required]
       }
       )
       this.id=this.aRoute.snapshot.paramMap.get('id');
@@ -57,6 +60,9 @@ export class CreateRecicladorComponent implements OnInit {
       apellido: this.createReciclador.value.apellido,
       documento: this.createReciclador.value.documento,
       fecha: this.createReciclador.value.fecha,
+      telefono: this.createReciclador.value.telefono,
+      correo: this.createReciclador.value.correo,
+      contrasena: this.createReciclador.value.contrasena,
       fechaCreacion:new Date(),
       fechaActualizacion:new Date()
     }
@@ -82,6 +88,9 @@ export class CreateRecicladorComponent implements OnInit {
       apellido: this.createReciclador.value.apellido,
       documento: this.createReciclador.value.documento,
       fecha: this.createReciclador.value.fecha,
+      telefono: this.createReciclador.value.telefono,
+      correo: this.createReciclador.value.correo,
+      contrasena: this.createReciclador.value.contrasena,
       fechaActualizacion:new Date()
     }
 
@@ -107,6 +116,9 @@ export class CreateRecicladorComponent implements OnInit {
           apellido: data.payload.data()['apellido'],
           documento: data.payload.data()['documento'],
           fecha: data.payload.data()['fecha'],
+          telefono: data.payload.data()['telefono'],
+          correo: data.payload.data()['correo'],
+          contrasena: data.payload.data()['contrasena'],
         })
       })
     }
